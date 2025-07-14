@@ -1,0 +1,8 @@
+require('keymapping')
+require('config.lazy')
+require('config.gruvbox')
+require('config.lualine')
+require('config.bufferline')
+require('config.telescope')
+require('config.nvim-tree')
+require('config.lsp')
