@@ -1,5 +1,6 @@
-require('keymapping')
 require('config.lazy')
+require('keymapping')
+require('basics')
 require('config.gruvbox')
 require('config.lualine')
 require('config.bufferline')
