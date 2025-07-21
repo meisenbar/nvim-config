@@ -26,9 +26,22 @@ require("nvim-tree").setup({
   -- },
 	on_attach = on_attach,
 
+	diagnostics = {
+		enable = true,
+
+		icons = {
+				error = "",
+				warning = "",
+				hint = "",
+				info = "",
+		},
+		show_on_dirs = true,
+	},
+
   view = {
     width = 30,
-    centralize_selection = true
+    centralize_selection = true,
+		signcolumn = 'yes'
   },
 
   renderer = {
