@@ -1,7 +1,16 @@
 local telescope = require("telescope")
+local actions = require("telescope.actions")
 
 -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
 telescope.setup {
+	defaults = {
+			mappings = {
+					i = {
+							-- quit telescope on ESC (no normal mode)
+							["<esc>"] = actions.close,
+					},
+			},
+	},
   extensions = {
 		fzf = {
 			fuzzy = true,                    -- false will only do exact matching
