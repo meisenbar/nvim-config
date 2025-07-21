@@ -11,3 +11,5 @@ vim.lsp.config('lua_ls', {
 		}
   },
 })
+
+vim.api.nvim_set_keymap('n', '<C-z>', ':LspEslintFixAll<CR>', { noremap = true, silent = true })

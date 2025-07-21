@@ -3,8 +3,8 @@ return {
 		"vue",
 		"typescript",
 		"javascript",
-		-- "javascriptreact",
-		-- "typescriptreact",
+		"javascriptreact",
+		"typescriptreact",
 	},
 	settings = {
 		vtsls = {
