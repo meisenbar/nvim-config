@@ -7,8 +7,7 @@ vim.opt.termguicolors = true
 
 local api = require('nvim-tree.api')
 
-function on_attach(bufnr)
-
+local function on_attach(bufnr)
 	local function opts(desc)
 		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 	end
@@ -42,5 +41,5 @@ require("nvim-tree").setup({
 })
 
 
-vim.keymap.set('n', '<C-n>', api.tree.toggle, { desc = 'Toggle nvim tree' })
+vim.keymap.set('n', '<C-n>', ":NvimTreeFindFileToggle<CR>", { desc = 'Toggle nvim tree' })
 
