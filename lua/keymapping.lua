@@ -21,3 +21,14 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<C-z>', ':LspEslintFixAll<CR>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<Leader>a', vim.lsp.buf.code_action, { noremap = true, silent = true })
+
+-- Auto close {(["'
+vim.keymap.set('i', '{<TAB>', '{  }<LEFT><LEFT>', { noremap = true, silent = true })
+vim.keymap.set('i', '{<CR>', '{<CR>}<ESC>O<TAB>', { noremap = true, silent = true })
+
+vim.keymap.set('i', '(<TAB>', '(  )<LEFT><LEFT>', { noremap = true, silent = true })
+vim.keymap.set('i', '[<TAB>', '[  ]<LEFT><LEFT>', { noremap = true, silent = true })
+vim.keymap.set('i', '[<CR>', '[<CR>]<ESC>O<TAB>', { noremap = true, silent = true })
+
+vim.keymap.set('i', '"<TAB>', '""<LEFT>', { noremap = true, silent = true })
+vim.keymap.set('i', '\'<TAB>', '\'\'<LEFT>', { noremap = true, silent = true })

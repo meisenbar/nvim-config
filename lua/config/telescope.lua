@@ -4,6 +4,7 @@ local actions = require("telescope.actions")
 -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
 telescope.setup {
 	defaults = {
+			-- initial_mode = "normal",
 			mappings = {
 					i = {
 							-- quit telescope on ESC (no normal mode)
@@ -42,3 +43,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+vim.keymap.set('n', '<leader>fgb', builtin.git_branches, { desc = 'Telescope Git branches' })
+
+vim.keymap.set('n', '<leader>fgs', builtin.git_status, { desc = 'Telescope Git status' })

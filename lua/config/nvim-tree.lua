@@ -35,7 +35,8 @@ require("nvim-tree").setup({
 				hint = "",
 				info = "",
 		},
-		show_on_dirs = true,
+
+		-- show_on_dirs = true,
 	},
 
   view = {
