@@ -41,7 +41,6 @@ require("nvim-tree").setup({
 
   view = {
     width = 30,
-    centralize_selection = true,
 		signcolumn = 'yes'
   },
 

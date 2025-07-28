@@ -7,4 +7,10 @@ conform.setup({
   },
 })
 
-vim.keymap.set('n', '<C-z>', conform.format, { noremap = true, silent = true })
+local function format ()
+	conform.format({ lsp_fallback=true, async=true })
+end
+
+
+vim.keymap.set('i', '<C-z>', format, { noremap = true, silent = true })
+vim.keymap.set('n', '<C-z>', format, { noremap = true, silent = true })
