@@ -35,12 +35,12 @@ require("nvim-tree").setup({
 				hint = "",
 				info = "",
 		},
-
-		-- show_on_dirs = true,
 	},
+
 
   view = {
     width = 30,
+		adaptive_size = true,
 		signcolumn = 'yes'
   },
 
