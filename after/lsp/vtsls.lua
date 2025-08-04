@@ -10,7 +10,7 @@ local vue_plugin = {
 }
 
 return {
-	filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+	filetypes = { 'javascriptreact', 'typescriptreact', 'vue' },
 
 	settings = {
 		typescript = {
@@ -25,7 +25,6 @@ return {
 					vue_plugin,
 				},
 			},
-
 		},
 	},
 }
