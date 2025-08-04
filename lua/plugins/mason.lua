@@ -8,6 +8,7 @@ return {
 
 		opts = {
 			ensure_installed = { "lua_ls", "vimls", "vtsls", "vue_ls", "eslint" },
+			automatic_enable = false
 		},
 	}
 }
