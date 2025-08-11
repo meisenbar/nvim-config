@@ -46,6 +46,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Telescope diagnostic' })
 
-vim.keymap.set('n', '<leader>fgb', builtin.git_branches, { desc = 'Telescope Git branches' })
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = 'Telescope Git branches' })
 
-vim.keymap.set('n', '<leader>fgs', builtin.git_status, { desc = 'Telescope Git status' })
+vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Telescope Git status' })
