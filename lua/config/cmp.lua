@@ -97,9 +97,7 @@ cmp.setup.cmdline({ '/', '?' }, {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-local lspconfig = require('lspconfig')
-
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-lspconfig.vtsls.setup {
+vim.lsp.config('vtsls', {
 	capabilities = capabilities
-}
+})
