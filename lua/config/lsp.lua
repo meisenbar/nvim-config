@@ -26,6 +26,18 @@ local vue_plugin = {
 
 local vtsls_config = {
 	settings = {
+		typescript = {
+			preferences = {
+				includePackageJsonAutoImports = 'off',
+			},
+			tsserver = {
+				maxTsServerMemory = 12288,
+				useSyntaxServer = 'never',
+				telemetry = {
+					enableTelemetry = false,
+				},
+			}
+		},
 		vtsls = {
 			tsserver = {
 				globalPlugins = {
@@ -37,8 +49,5 @@ local vtsls_config = {
 	filetypes = tsserver_filetypes,
 }
 
-local vue_ls_config = {}
-
 vim.lsp.config('vtsls', vtsls_config)
-vim.lsp.config('vue_ls', vue_ls_config)
 vim.lsp.enable({ 'vtsls', 'vue_ls' })

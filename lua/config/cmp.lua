@@ -101,3 +101,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 vim.lsp.config('vtsls', {
 	capabilities = capabilities
 })
+
+vim.lsp.config('vue_ls', {
+	capabilities = capabilities
+})
