@@ -22,6 +22,7 @@ local vue_plugin = {
 	location = vue_language_server_path,
 	languages = { 'vue' },
 	configNamespace = 'typescript',
+	enableForWorkspaceTypeScriptVersions = true,
 }
 
 local vtsls_config = {
@@ -32,10 +33,6 @@ local vtsls_config = {
 			},
 			tsserver = {
 				maxTsServerMemory = 12288,
-				useSyntaxServer = 'never',
-				telemetry = {
-					enableTelemetry = false,
-				},
 			}
 		},
 		vtsls = {
