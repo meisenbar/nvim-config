@@ -15,7 +15,7 @@ vim.lsp.config('lua_ls', {
 local vue_language_server_path = vim.fn.expand '$MASON/packages' ..
 		'/vue-language-server' .. '/node_modules/@vue/language-server'
 
-local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
+local tsserver_filetypes = { 'typescript', 'vue' }
 
 local vue_plugin = {
 	name = '@vue/typescript-plugin',
@@ -47,4 +47,4 @@ local vtsls_config = {
 }
 
 vim.lsp.config('vtsls', vtsls_config)
-vim.lsp.enable({ 'vtsls', 'vue_ls' })
+vim.lsp.enable({ 'vtsls', 'vue_ls', 'csharp_ls' })
