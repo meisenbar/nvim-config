@@ -23,6 +23,8 @@ cmp.setup({
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
+    ['<C-a>'] = require('minuet').make_cmp_map(),
+
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		['<C-Space>'] = cmp.mapping.complete(),
@@ -55,6 +57,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
+		{ name = 'minuet' }, -- AI support
 		-- { name = 'vsnip' }, -- For vsnip users.
 		-- { name = 'luasnip' }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
@@ -62,6 +65,9 @@ cmp.setup({
 	}, {
 		{ name = 'buffer' },
 	}),
+	performance = {
+		fetching_timeout = 2000,
+	},
 	max_item_count = vim.api.nvim_get_option("pumheight")
 })
 
