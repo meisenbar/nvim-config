@@ -36,6 +36,14 @@ local vtsls_config = {
 			}
 		},
 		vtsls = {
+			experimental = {
+				completion = {
+					-- Limit the number of completion items returned by the server
+					entriesLimit = 100, -- You can adjust this number as needed
+					-- Optional: enable server-side fuzzy matching for performance
+					enableServerSideFuzzyMatch = true,
+				},
+			},
 			tsserver = {
 				globalPlugins = {
 					vue_plugin,
