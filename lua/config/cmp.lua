@@ -45,6 +45,7 @@ cmp.setup({
 				fallback()
 			end
 		end,
+
 		["<S-Tab>"] = function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
@@ -55,6 +56,7 @@ cmp.setup({
 			end
 		end,
 	}),
+
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'minuet' }, -- AI support
@@ -65,9 +67,11 @@ cmp.setup({
 	}, {
 		{ name = 'buffer' },
 	}),
+
 	performance = {
 		fetching_timeout = 2000,
 	},
+
 	max_item_count = vim.api.nvim_get_option("pumheight")
 })
 
