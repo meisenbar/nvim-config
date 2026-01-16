@@ -19,4 +19,19 @@ vim.opt.undofile = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+-- commands
+--:set autoread | :set syntax=logtalk | au CursorHold * checktime | call feedkeys("lh")
 
+vim.api.nvim_create_user_command('Logtail',
+	function()
+		vim.opt.syntax = 'logtalk'
+
+		vim.opt.autoread = true
+
+		vim.api.nvim_create_autocmd("CursorHold", {
+			pattern = "*",
+			command = "checktime",
+		})
+
+		vim.api.nvim_feedkeys("lh", 'm', true)
+	end, {})
